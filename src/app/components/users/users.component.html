@@ -1,0 +1,15 @@
+<div>
+  <div *ngFor="let u of users">
+    <app-user [user]="u" (userLift)="userLift($event)"></app-user>
+  </div>
+
+  <hr>
+  <div *ngIf="chosenUser">
+    {{chosenUser?.id}}
+    --{{chosenUser?.name}}
+    --{{chosenUser?.username}}
+    --{{chosenUser?.email}}
+    <button (click)="storeUser()">Login</button>
+  </div>
+  <hr>
+</div>
